@@ -1,4 +1,4 @@
-﻿// Test.idl: Test 的 IDL 源
+// Test.idl: Test 的 IDL 源
 //
 
 // 此文件将由 MIDL 工具处理以
@@ -8,11 +8,30 @@ import "oaidl.idl";
 import "ocidl.idl";
 
 [
+	object,
+	uuid(fe5b020e-cbff-43cd-aa42-e3097408f312),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IJisuanqi : IDispatch
+{
+	[id(1)] HRESULT Number([in] LONG __num, [out, retval] LONG* __result);
+};
+[
 	uuid(c255a35d-567b-4c61-b395-c2dba61a086b),
 	version(1.0),
 ]
 library TestLib
 {
 	importlib("stdole2.tlb");
+	[
+		uuid(589dbacf-4f9b-4ec8-8fbf-23d9d933c545)
+	]
+	coclass Jisuanqi
+	{
+		[default] interface IJisuanqi;
+	};
 };
 
+import "shobjidl.idl";

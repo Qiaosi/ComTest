@@ -1,0 +1,26 @@
+HKCR
+{
+	Test.jisuanqi.1 = s 'Jisuanqi class'
+	{
+		CLSID = s '{589dbacf-4f9b-4ec8-8fbf-23d9d933c545}'
+	}
+	Test.jisuanqi = s 'Jisuanqi class'
+	{		
+		CurVer = s 'Test.jisuanqi.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {589dbacf-4f9b-4ec8-8fbf-23d9d933c545} = s 'Jisuanqi class'
+		{
+			ProgID = s 'Test.jisuanqi.1'
+			VersionIndependentProgID = s 'Test.jisuanqi'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{c255a35d-567b-4c61-b395-c2dba61a086b}'
+			Version = s '1.0'
+		}
+	}
+}

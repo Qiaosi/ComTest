@@ -40,6 +40,9 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Jisuanqi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Test.cpp">
@@ -57,6 +60,9 @@
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Jisuanqi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Test.rc">
@@ -69,6 +75,9 @@
     </None>
     <None Include="Test.def">
       <Filter>源文件</Filter>
+    </None>
+    <None Include="Jisuanqi.rgs">
+      <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
